@@ -1,0 +1,11 @@
+<h1>Agregar cliente</h1>
+<link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+
+<form method="POST">
+    Nombre: <input name="nombre"><br>
+    Correo: <input name="correo"><br>
+    Teléfono: <input name="telefono"><br>
+    <button type="submit">Guardar</button>
+</form>
+
+<a href="/clientes">Ver clientes</a>

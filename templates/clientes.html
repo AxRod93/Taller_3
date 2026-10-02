@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clientes | Mi tienda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    <main class="contenedor">
+        <header class="encabezado">
+            <div class="marca">Mi tienda</div>
+            <h1>Clientes</h1>
+            <p class="subtitulo">Consulta y administra los clientes registrados.</p>
+        </header>
+
+        <section class="contenido">
+            <div class="barra-acciones">
+                <span class="etiqueta">Directorio de clientes</span>
+                <a class="boton" href="{{ url_for('agregar_cliente') }}">
+                    + Agregar cliente
+                </a>
+            </div>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Teléfono</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for cliente in clientes %}
+                        <tr>
+                            <td>{{ cliente.nombre }}</td>
+                            <td>{{ cliente.correo }}</td>
+                            <td>{{ cliente.telefono }}</td>
+                            <td class="opciones">
+                                <a class="accion-editar"
+                                   href="{{ url_for('editar_cliente', id=cliente.id) }}">
+                                    Editar
+                                </a>
+
+                                <form method="POST"
+                                      action="{{ url_for('borrar_cliente', id=cliente.id) }}">
+                                    <button class="accion-borrar" type="submit">
+                                        Borrar
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td class="vacio" colspan="4">
+                                Aún no hay clientes registrados.
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
