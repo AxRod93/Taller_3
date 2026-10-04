@@ -1,0 +1,60 @@
+/* formularios.css - páginas de agregar y editar */
+ 
+/* ---------- Formularios: panel cobalto + campos ---------- */
+ 
+.dividida { display: grid; grid-template-columns: minmax(300px, 5fr) 7fr; min-height: 100vh; }
+ 
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 48px;
+    padding: 32px 48px 44px;
+    color: var(--blanco);
+    background: var(--cobalto);
+}
+ 
+.panel h1 {
+    margin: 0 0 14px;
+    font-family: var(--display);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 800;
+    letter-spacing: -0.055em;
+    line-height: 0.98;
+}
+ 
+.panel p { max-width: 340px; margin: 0; color: #c5cbff; }
+ 
+.volver { color: var(--blanco); font-weight: 600; text-underline-offset: 5px; text-decoration-thickness: 2px; }
+ 
+.campos { display: flex; align-items: center; padding: 64px; }
+ 
+.campos form { display: grid; gap: 34px; width: min(100%, 460px); }
+ 
+.campos label { display: grid; gap: 4px; color: var(--suave); font-size: 0.88rem; font-weight: 600; }
+ 
+.campos input {
+    width: 100%;
+    min-height: 54px;
+    padding: 0 4px;
+    color: var(--tinta);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--borde);
+    border-radius: 0;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: border-color 150ms ease, background 150ms ease;
+}
+ 
+.campos input::placeholder { color: #aeb1d2; font-weight: 400; }
+.campos input:hover { border-bottom-color: #a9acd8; }
+.campos input:focus { outline: none; background: var(--mantequilla-claro); border-bottom-color: var(--cobalto); }
+ 
+.acciones-formulario { display: flex; align-items: center; gap: 22px; margin-top: 6px; }
+.acciones-formulario .boton { min-height: 54px; padding: 0 34px; }
+ 
+.enlace { color: var(--suave); font-weight: 600; text-underline-offset: 5px; text-decoration-thickness: 2px; }
+.enlace:hover { color: var(--tinta); }
+ 

@@ -1,0 +1,129 @@
+/* listado.css - página de clientes (banda, botón, directorio por letras) */
+ 
+/* ---------- Banda cobalto (listado) ---------- */
+ 
+.banda { color: var(--blanco); background: var(--cobalto); padding-bottom: 76px; }
+ 
+.barra { display: flex; align-items: center; justify-content: space-between; padding: 24px 0; }
+ 
+.marca {
+    color: var(--blanco);
+    font-family: var(--display);
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+}
+ 
+.enlaces { display: flex; gap: 28px; }
+ 
+.enlaces a {
+    padding: 6px 0;
+    color: #c5cbff;
+    border-bottom: 3px solid transparent;
+    font-weight: 500;
+    text-decoration: none;
+}
+ 
+.enlaces a:hover { color: var(--blanco); }
+.enlaces a[aria-current="page"] { color: var(--blanco); border-bottom-color: var(--mantequilla); }
+ 
+.banda h1 {
+    margin: 44px 0 10px;
+    font-family: var(--display);
+    font-size: clamp(3.2rem, 10vw, 7rem);
+    font-weight: 800;
+    letter-spacing: -0.055em;
+    line-height: 0.95;
+}
+ 
+.subtitulo { margin: 0; color: #c5cbff; font-size: 1.05rem; }
+ 
+ 
+/* ---------- Botón de agregar ---------- */
+ 
+.herramientas {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -28px;
+}
+ 
+ 
+.herramientas .boton { min-height: 56px; padding: 0 32px; box-shadow: 0 10px 30px rgb(15 18 64 / 18%); }
+ 
+ 
+/* ---------- Directorio agrupado por letra ---------- */
+ 
+.directorio { padding: 36px 0 80px; }
+ 
+.fila {
+    display: grid;
+    grid-template-columns: 84px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px 16px;
+    padding: 20px 16px;
+    border-top: 1px solid var(--borde);
+    transition: background 150ms ease;
+}
+ 
+.fila:last-child { border-bottom: 1px solid var(--borde); }
+.fila:hover { background: var(--mantequilla-claro); }
+.fila.inicio-grupo { border-top: 2px solid var(--cobalto); }
+ 
+.letra {
+    color: var(--cobalto);
+    font-family: var(--display);
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+ 
+ 
+.nombre {
+    margin: 0;
+    font-family: var(--display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+ 
+.contacto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 28px;
+    margin: 4px 0 0;
+    color: var(--suave);
+    font-size: 0.95rem;
+}
+ 
+.sin-dato { font-style: italic; opacity: 0.8; }
+ 
+.opciones { display: flex; align-items: center; gap: 20px; }
+.opciones form { margin: 0; }
+ 
+.accion-editar,
+.accion-borrar {
+    min-height: 36px;
+    padding: 0;
+    color: var(--cobalto);
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+    text-decoration-color: transparent;
+    cursor: pointer;
+    transition: text-decoration-color 150ms ease;
+}
+ 
+.accion-borrar { color: var(--rojo); }
+.accion-editar:hover, .accion-borrar:hover { text-decoration-color: currentColor; }
+ 
+.vacio { padding: 64px 16px; color: var(--suave); font-size: 1.1rem; border-top: 2px solid var(--cobalto); }
+ 

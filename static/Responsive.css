@@ -1,0 +1,22 @@
+/* responsive.css - ajustes para pantallas pequeñas (cargar al final) */
+ 
+@media (max-width: 860px) {
+    .dividida { grid-template-columns: 1fr; min-height: 0; }
+    .panel { gap: 28px; padding: 24px 24px 32px; }
+    .campos { padding: 36px 24px 56px; }
+}
+ 
+@media (max-width: 640px) {
+    .banda { padding-bottom: 64px; }
+    .herramientas { flex-direction: column; }
+    .herramientas .boton { width: 100%; }
+    .fila { grid-template-columns: 44px minmax(0, 1fr); padding: 18px 8px; }
+    .letra { font-size: 2rem; }
+    .opciones { grid-column: 2; }
+    .nombre { font-size: 1.3rem; }
+    .acciones-formulario { flex-direction: column; align-items: stretch; gap: 14px; }
+    .enlace { text-align: center; }
+}
+ 
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+ 

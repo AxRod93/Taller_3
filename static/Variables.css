@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap");
+ 
+/* variables.css - colores y fuentes. Cambia la paleta aquí */
+/* Paleta: cobalto (identidad) + mantequilla (acento puntual) + tinta (texto) */
+:root {
+    --cobalto: #2433d1;
+    --cobalto-oscuro: #1a25a3;
+    --tinta: #0f1240;
+    --fondo: #f5f5fb;
+    --blanco: #ffffff;
+    --mantequilla: #f7e36b;
+    --mantequilla-claro: #fdf7d3;
+    --suave: #5b5f8c;
+    --borde: #d9dbf1;
+    --rojo: #c2332b;
+    --display: "Bricolage Grotesque", sans-serif;
+}
+ 
