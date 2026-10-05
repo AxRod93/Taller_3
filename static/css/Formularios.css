@@ -11,7 +11,7 @@
     gap: 48px;
     padding: 32px 48px 44px;
     color: var(--blanco);
-    background: var(--cobalto);
+    background: var(--encabezado);
 }
  
 .panel h1 {
@@ -50,7 +50,7 @@
  
 .campos input::placeholder { color: #aeb1d2; font-weight: 400; }
 .campos input:hover { border-bottom-color: #a9acd8; }
-.campos input:focus { outline: none; background: var(--mantequilla-claro); border-bottom-color: var(--cobalto); }
+.campos input:focus { outline: none; background: var(--mantequilla-claro); border-bottom-color: var(--encabezado); }
  
 .acciones-formulario { display: flex; align-items: center; gap: 22px; margin-top: 6px; }
 .acciones-formulario .boton { min-height: 54px; padding: 0 34px; }

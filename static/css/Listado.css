@@ -108,7 +108,7 @@
 .accion-borrar {
     min-height: 36px;
     padding: 0;
-    color: var(--cobalto);
+    color: var(--encabezado);
     background: none;
     border: none;
     font-family: inherit;
@@ -125,5 +125,5 @@
 .accion-borrar { color: var(--rojo); }
 .accion-editar:hover, .accion-borrar:hover { text-decoration-color: currentColor; }
  
-.vacio { padding: 64px 16px; color: var(--suave); font-size: 1.1rem; border-top: 2px solid var(--cobalto); }
+.vacio { padding: 64px 16px; color: var(--suave); font-size: 1.1rem; border-top: 2px solid var(--encabezado); }
  
