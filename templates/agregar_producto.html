@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nuevo producto | Mi tienda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Estilos.css') }}">
+</head>
+<body>
+    <div class="dividida">
+
+        <aside class="panel">
+            <a class="marca" href="{{ url_for('inicio') }}">Mi tienda</a>
+
+            <div>
+                <h1>Nuevo producto</h1>
+                <p>Registra los datos del producto para añadirlo a tu catálogo.</p>
+            </div>
+
+            <a class="volver" href="{{ url_for('productos') }}">Volver a productos</a>
+        </aside>
+
+        <main class="campos">
+            <form method="POST">
+                <label>
+                    Nombre del producto
+                    <input type="text" name="nombre" maxlength="50" required placeholder="Ej. Café molido">
+                </label>
+
+                <label>
+                    Precio (₡)
+                    <input type="number" name="precio" step="0.01" min="0" required placeholder="Ej. 4500">
+                </label>
+
+                <label>
+                    Stock disponible
+                    <input type="number" name="stock" min="0" required placeholder="Ej. 12">
+                </label>
+
+                <div class="acciones-formulario">
+                    <button class="boton" type="submit">Guardar producto</button>
+                    <a class="enlace" href="{{ url_for('productos') }}">Cancelar</a>
+                </div>
+            </form>
+        </main>
+
+    </div>
+</body>
+</html>

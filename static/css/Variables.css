@@ -3,16 +3,16 @@
 /* colores y fuentes. 
 /* Paleta: cobalto (identidad) + mantequilla (acento puntual) +  tinta (texto) */
 :root {
-    --encabezado: #d94004;
-    --cobalto-oscuro: #f36a10e4;
+    --encabezado: #007911;
+    --cobalto-oscuro: #00aa17e4;
     --tinta: #ffffff;
-    --fondo: #383636;
+    --fondo: #1f1e1e; 
     --blanco: #ffffff;
-    --mantequilla: #28be70;
+    --mantequilla: #f73475;
     --mantequilla-claro: #030303;
     --suave: #bcacac;
-    --borde: #ff0000;
-    --rojo: #c2332b;
+    --borde: #703107;
+    --rojo: #8a440b;
     --display: "Bricolage Grotesque", sans-serif;
 }
  

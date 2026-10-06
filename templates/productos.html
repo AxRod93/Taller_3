@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Productos | Mi tienda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Estilos.css') }}">
+</head>
+<body>
+
+    <header class="banda">
+        <div class="ancho">
+            <nav class="barra" aria-label="Principal">
+                <a class="marca" href="{{ url_for('inicio') }}">Mi tienda</a>
+                <div class="enlaces">
+                    <a href="{{ url_for('inicio') }}">Inicio</a>
+                    <a href="{{ url_for('productos') }}" aria-current="page">Productos</a>
+                </div>
+            </nav>
+
+            <h1>Productos</h1>
+            <p class="subtitulo">
+                {% if productos|length == 1 %}1 producto registrado{% else %}{{ productos|length }} productos registrados{% endif %} en tu tienda.
+            </p>
+        </div>
+    </header>
+
+    <main class="ancho">
+
+        <div class="herramientas">
+            <a class="boton" href="{{ url_for('agregar_producto') }}">Agregar producto</a>
+        </div>
+
+        <section class="directorio">
+            {% set ns = namespace(letra='') %}
+            {% for producto in productos|sort(attribute='nombre', case_sensitive=False) %}
+                {% set inicial = producto.nombre[:1]|upper %}
+                {% set nueva = inicial != ns.letra %}
+
+                <article class="fila{% if nueva %} inicio-grupo{% endif %}">
+                    <div class="letra" aria-hidden="true">{% if nueva %}{{ inicial }}{% endif %}</div>
+
+                    <div>
+                        <p class="nombre">{{ producto.nombre }}</p>
+                        <p class="contacto">
+                            <span>${{ "%.2f"|format(producto.precio) }}</span>
+                            {% if producto.stock and producto.stock > 0 %}
+                                <span>{{ producto.stock }} en stock</span>
+                            {% else %}
+                                <span class="sin-dato">Sin stock</span>
+                            {% endif %}
+                        </p>
+                    </div>
+
+                    <div class="opciones">
+                        <a class="accion-editar" href="{{ url_for('editar_producto', id=producto.id) }}">Editar</a>
+
+                        <form method="POST"
+                              action="{{ url_for('borrar_producto', id=producto.id) }}"
+                              onsubmit="return confirm('¿Deseas eliminar este producto?');">
+                            <button class="accion-borrar" type="submit">Borrar</button>
+                        </form>
+                    </div>
+                </article>
+
+                {% set ns.letra = inicial %}
+            {% else %}
+                <p class="vacio">Aún no hay productos. Usa “Agregar producto” para registrar el primero.</p>
+            {% endfor %}
+        </section>
+
+    </main>
+</body>
+</html>
