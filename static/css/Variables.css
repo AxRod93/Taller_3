@@ -1,18 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap");
- 
-/* colores y fuentes. 
-/* Paleta: cobalto (identidad) + mantequilla (acento puntual) +  tinta (texto) */
+/* colores y fuentes. */
+
 :root {
     --encabezado: #007911;
-    --cobalto-oscuro: #00aa17e4;
-    --tinta: #ffffff;
+    --secundario: #00aa17e4;
+    --texto: #948c8c;
     --fondo: #1f1e1e; 
-    --blanco: #ffffff;
-    --mantequilla: #f73475;
-    --mantequilla-claro: #030303;
+    --claro: #ffffff;
+    --acento: #f73475;
+    --acento-suave: #93bd96;
     --suave: #bcacac;
-    --borde: #703107;
-    --rojo: #8a440b;
-    --display: "Bricolage Grotesque", sans-serif;
+    --accion: #2563eb;
+    --borde: #00591e;
+    --alerta: #ff0008;
+    --fuente-titulo: "Bricolage Grotesque", sans-serif;
+}
+
+* { box-sizing: border-box; }
+ 
+body {
+    margin: 0;
+    color: var(--texto);
+    background: var(--fondo);
+    font-family: "Figtree", system-ui, sans-serif;
+    line-height: 1.5;
 }
  
+a { color: inherit; }
+ 
+:focus-visible { outline: 3px solid var(--encabezado); outline-offset: 3px; }
+.banda :focus-visible, .panel :focus-visible { outline-color: var(--acento); }
+ 
+.ancho { width: min(100% - 48px, 1000px); margin-inline: auto; }

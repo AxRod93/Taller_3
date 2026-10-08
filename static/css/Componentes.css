@@ -1,12 +1,12 @@
 /* componentes.css - elementos reutilizables (botones) */
- 
+
 .boton {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     min-height: 48px;
     padding: 0 28px;
-    color: var(--blanco);
+    color: var(--claro);
     background: var(--encabezado);
     border: none;
     border-radius: 999px;
@@ -17,6 +17,4 @@
     cursor: pointer;
     transition: background 150ms ease;
 }
- 
-.boton:hover { background: var(--cobalto-oscuro); }
- 
+.boton:hover { background: var(--secundario); }
