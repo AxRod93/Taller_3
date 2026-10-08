@@ -1,2 +1,48 @@
-<a class="boton" href="{{ url_for('productos') }}">Ver productos</a>
-<a class="boton" href="{{ url_for('clientes') }}">Ver clientes</a>
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio | Taller #3 Programacion IV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Estilos.css') }}">
+</head>
+
+<body>
+
+    <header class="banda inicio">
+        <div class="ancho">
+            <nav class="barra" aria-label="Principal">
+                <a class="marca" href="{{ url_for('inicio') }}">Taller #3 Programacion IV</a>
+
+                <div class="enlaces">
+                    <a href="{{ url_for('inicio') }}" aria-current="page">Inicio</a>
+                    <a href="{{ url_for('clientes') }}">Clientes</a>
+                    <a href="{{ url_for('productos') }}">Productos</a>
+                </div>
+            </nav>
+
+            <h1>Bienvenido</h1>
+            <p class="subtitulo">
+                Gestiona los productos y clientes de tu tienda.
+            </p>
+        </div>
+    </header>
+
+    <main class="ancho inicio-contenido">
+
+        <div class="inicio-botones">
+
+            <a class="boton boton-inicio" href="{{ url_for('clientes') }}">
+                Ver clientes
+            </a>
+
+            <a class="boton boton-inicio" href="{{ url_for('productos') }}">
+                Ver productos
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

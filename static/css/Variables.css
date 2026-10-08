@@ -3,13 +3,14 @@
 :root {
     --encabezado: #007911;
     --secundario: #00aa17e4;
-    --texto: #948c8c;
-    --fondo: #1f1e1e; 
+    --texto: #ffffff;
+    --texto-listado: #faf9f9;
+    --fondo: #232323; 
     --claro: #ffffff;
     --acento: #f73475;
-    --acento-suave: #93bd96;
-    --suave: #bcacac;
-    --accion: #2563eb;
+    --acento-suave: #007911;
+    --suave: #ffffff;
+    --accion: #07fa34;
     --borde: #00591e;
     --alerta: #ff0008;
     --fuente-titulo: "Bricolage Grotesque", sans-serif;

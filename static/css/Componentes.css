@@ -1,4 +1,4 @@
-/* componentes.css - elementos reutilizables (botones) */
+/* componentes.css - elementos reutilizables*/
 
 .boton {
     display: inline-flex;
@@ -18,3 +18,27 @@
     transition: background 150ms ease;
 }
 .boton:hover { background: var(--secundario); }
+
+.boton-inicio {
+    margin-right: 12px;
+    min-height: 46px;
+    padding: 0 24px;
+    border-radius: 8px;
+}
+.inicio-contenido {
+    padding-top: 48px;
+}
+
+.inicio-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 40px 0;
+}
+
+.boton-inicio {
+    min-height: 50px;
+    padding: 0 28px;
+    border-radius: 8px;
+}

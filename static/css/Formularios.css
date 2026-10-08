@@ -1,4 +1,4 @@
-/* formularios.css - páginas de agregar y editar */
+/*Páginas de agregar y editar */
 
 .dividida { display: grid; grid-template-columns: minmax(300px, 5fr) 7fr; min-height: 100vh; }
 

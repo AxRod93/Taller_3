@@ -1,4 +1,4 @@
-/* responsive.css - ajustes para pantallas pequeñas (cargar al final) */
+/* ajustes para pantallas */
  
 @media (max-width: 860px) {
     .dividida { grid-template-columns: 1fr; min-height: 0; }

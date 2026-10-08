@@ -1,4 +1,4 @@
-/*página de clientes y productos(banda, botón, directorio por letras) */
+/*página de clientes y productos */
 
 .banda { color: var(--claro); background: var(--encabezado); padding-bottom: 76px; }
 .barra { display: flex; align-items: center; justify-content: space-between; padding: 24px 0; }
@@ -67,6 +67,7 @@
 
 .nombre {
     margin: 0;
+    color: var(--texto-listado);
     font-family: var(--fuente-titulo);
     font-size: 1.5rem;
     font-weight: 700;
